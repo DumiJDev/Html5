@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Feliz Natal e Ano Novo!!!</title>
+  </head>
+
+  <body style="font-family: Georgia, 'Times New Roman', Times, serif;">
+    <div id="header">
+      <div id="logo"><span>Paty</span></div>
+      <div id="desejo"><a href="#">Desejo ser melhor serva</a></div>
+    </div>
+
+    <div id="sup">
+      <form>
+        <label>Digite seu nome: </label><input type="text" id="nome" value="" /><br>
+        <label>Digite seu nome de carinho: </label><input type="text" id="carinho" value="" /><br>
+        <button type="button" onclick="desenha();">
+          Aperte aqui e veja a surpresa
+        </button>
+      </form>
+
+      <div id="supsup" style="text-align: center"></div>
+    </div>
+
+    <script>
+      var nome = "";
+      var carinho = "";
+
+      function desenha() {
+        nome = document.getElementById("nome").value.toUpperCase();
+        carinho = document.getElementById("carinho").value.toUpperCase();
+        var docSup = document.getElementById("supsup");
+        var arvore = "";
+
+        if (nome.length % 2)
+          for (var i = 0; i < nome.length; i++) {
+            for (var j = 0; j < i; j++) arvore += nome[i];
+
+            arvore += nome[i];
+
+            for (var j = 0; j < i; j++) arvore += nome[i];
+
+            arvore += "<br/>";
+          }
+        else
+          for (var i = 0; i < nome.length; i++) {
+            for (var j = 0; j < 2 * i + 1; j++) arvore += nome[i];
+            arvore += "<br/>";
+          }
+
+        if (nome.length < 5) arvore += "1" + "<br>" + carinho;
+        else arvore += "1<br>1" + "<br>" + carinho;
+
+        docSup.innerHTML = arvore;
+      }
+    </script>
+  </body>
+</html>
