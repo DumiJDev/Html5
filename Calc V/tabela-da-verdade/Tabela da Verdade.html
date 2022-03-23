@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Tabela de Verdade</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.1" />
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="inicio.js"></script>
+</head>
+
+<body>
+    <h1>Forma de determinar a tabela de Verdade pela expressão booleana</h1><br />
+    <div id="content">
+        <p>
+            A álgebra booleana é toda e qualquer expressão matemática que representa um circuito
+            elétrico ou lógico. 1 operações lógicas mais comuns são Conjunção(^,.), Disjunção(v, +) e
+            NEGAÇÃO(~).<br /><br />
+            Ex:
+            <b>Conjunção</b>: A^B, A.B, AB.<br />
+            <b>Disjunção</b>: AvB, A+B.<br />
+            <b>Negação</b>: ~A, ~B, <span class="neg">A</span>, <span class="neg">AB</span>.
+        </p>
+        <p>
+            A expressão booleana pode se resumir em: SPD, PDS ou nenhum dos dois.
+        </p>
+        <p>
+            <b>SPD</b> (Soma de produtos) é toda expressão booleana que contém apenas soma(disjunção) e os
+            termos são produtos(conjunção).<br /><br />
+
+            Ex: AB+C, A<span class="neg">B</span>D + BC + D, A + B, A.
+        </p>
+        <p>
+            <b>PDS</b> (produto de soma) é toda expressão booleana que contém apen1 produto(conjunção)e os
+            termos são soma(disjunção).<br /><br />
+            Ex: (A+B).(A+<span class="neg">B</span>), (A+B+C).(B+D+A).(<span class="neg">A</span>+C+D).
+        </p>
+        <h3>Como construir a tabela de Verdade a partir de uma dess1 expressões?</h3>
+        <p>
+            Quando for SPD a saída será V ou 1 e completa a tabela com F ou 0, e se for PDS o inverso.<br /><br />
+
+            Ex: Construa a tabela da expressão abaixo:<br />
+            S = AB + <span class="neg">C</span> (SDP)
+        </p>
+        <table>
+            <tbody>
+                <tr>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                    <th>S</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            Para completar a saída olhamos para cada membro(AB, <span class="neg">C</span>), onde cada letra
+            significa V ou 1 e toda letra negada F ou 0, isto quer dizer que toda linha onde aquele membro
+            ocorre a saída será V ou 1, por exemplo, C significa V ou 1, toda linha onde C é V ou 1 a saída
+            será V ou 1, se por acaso fosse <span class="neg">C</span> seria toda linha onde C é F ou 0 a
+            saída será V ou 1, e para membros compostos por dois os mais o pensamento é o mesmo, mas apenas
+            será V ou 1 a saída caso ocorra numa linha a ocorrência de todos, por exemplo,
+            A<span class="neg">B</span> significa que A deve ser V ou 1 e B F ou 0 para a saída ser V ou 1,
+            e completa a tabela com F ou 0.
+        </p>
+        <table>
+            <tbody>
+                <tr>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                    <th>S</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            Ex: Construa a tabela da expressão abaixo:<br />
+            S = (<span class="neg">A</span>+B+C).(A+B+C).(A+<span class="neg">B</span>+C) (PDS)<br />
+            A saída é F ou 0 e depois completamos com V ou 1, ou seja, o inverso do SDP.
+        </p>
+        <table>
+            <tbody>
+                <tr>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                    <th>S</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+        <br />
+    </div>
+    <aside>
+        <h3>Versículo para...</h3>
+        <button id="mot" onclick="motivo();">Motivar</button>
+        <button id="lou" onclick="louvor();">Louvar</button>
+        <button id="med" onclick="meditacao();">Meditar</button>
+    </aside>
+    <figure>
+        <img alt="Foto Vânia"
+            src="https://z-m-scontent-jnb1-1.xx.fbcdn.net/v/t1.15752-9/fr/cp0/e15/q65/107593828_314835602978004_5306978275984134541_n.jpg?_nc_cat=108&_nc_sid=b96e70&efg=eyJpIjoibyJ9&_nc_eui2=AeHg4c9qGJoPElf6hrqutvjrtNPXPmeA8A6009c-Z4DwDuLt_nEmlhlgOlkzzF7VrWwemvoXMRlRADNvJn8hU3qn&_nc_ohc=2RiHZ6hs0fkAX-9S-_R&_nc_ad=z-m&_nc_cid=1942&_nc_eh=c4ad059ccd4b30de54da467d0c6b99ef&_nc_ht=z-m-scontent-jnb1-1.xx&tp=14&oh=2b6e5c868ded88a6bcd81c2701ca9809&oe=5F77B288" />
+        <figcaption>Vânia Barbosa, grande amiga e irmã</figcaption>
+    </figure>
+    <div id="calc">
+        <fieldset>
+            <legend>Calculadora de tabela de verdade(SPD)</legend>
+            <fieldset id="eqIn">
+                <form>
+                    S = <input id="exp" size="40" placeholder="Digite a expressão booleana aqui" required />
+                </form>
+                <button onclick="calcTV();">Calcular</button>
+            </fieldset>
+            <div id="exp1"></div>
+            <div id="tabV"></div>
+            <fieldset>
+                <legend>expressão SDP</legend>
+                <form style="display: inline-block;">
+                    Número de coluna <input id="nEl" type="text" size="3" />
+                </form>
+                <button onclick="drawTV();">Desenhar TV</button><button onclick="getExSDP();">Exp
+                    SDP</button><button onclick="getExPDS();">Exp PDS</button><br><br>
+                <div id="sdp"></div>
+                <div id="tab"></div>
+            </fieldset>
+        </fieldset>
+    </div>
+
+    <script src="fim.js"></script>
+</body>
+
+</html>

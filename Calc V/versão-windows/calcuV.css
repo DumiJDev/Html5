@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    color: white;
+    font: normal 20pt arial;
+    background: linear-gradient(to right, rgb(61, 108, 129), rgb(21, 62, 100));
+}
+
+h3 {
+    text-align: center;
+}
+
+#calcF {
+    width: 20%;
+    margin-left: 40%;
+    text-align: center;
+}
+
+#bt {
+    width: 100%;
+}
+
+#visorf {
+    text-align: right;
+
+}
+
+#eq {
+    font-size: 11pt;
+
+}
+
+button {
+    border-radius: 0;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
+    width: 20%;
+    height: 15%;
+    margin: 3px;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    transition: all 500ms linear;
+}

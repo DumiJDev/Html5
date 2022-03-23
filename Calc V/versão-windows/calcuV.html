@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=devic­e-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="calcuV.css">
+        <title>Calc V</title>
+    <body>
+        <h3>Calculadora Básica!!!</h3>
+        <div id="calculadora" name="calc">
+            <fieldset id="calcF">
+
+                <fieldset id="visorf">
+
+                    <div id="visor">
+
+                        <div id="eq"></div><br />
+
+                        <div id="val">0</div>
+
+                    </div>
+
+                </fieldset>
+
+                <div id="bt">
+                    <button onclick="perc()">%</button>
+                    <button onclick="raiz()">√</button>
+                    <button onclick="quad()">x²</button>
+                    <button onclick="inversa()" >1/x</button>
+                    <br />
+
+                    <button onclick="resetC()" >CE</button>
+                    <button onclick="resetC()" >C</button>
+                    <button onclick="backspace()" >←</button>
+                    <button value="÷" onclick="btOperacao(value)" >÷</button>
+                    <br />
+
+                    <button value="7" onclick="btNumero(value)">7</button>
+                    <button value="8" onclick="btNumero(value)">8</button>
+                    <button value="9" onclick="btNumero(value)">9</button>
+                    <button value="×" onclick="btOperacao(value)">×</button>
+                    <br />
+
+                    <button value="4" onclick="btNumero(value)">4</button>
+                    <button value="5" onclick="btNumero(value)">5</button>
+                    <button value="6" onclick="btNumero(value)">6</button>
+                    <button value="-" onclick="btOperacao(value)">-</button>
+                    <br />
+
+                    <button value="1" onclick="btNumero(value)">1</button>
+                    <button value="2" onclick="btNumero(value)">2</button>
+                    <button value="3" onclick="btNumero(value)">3</button>
+                    <button value="+" onclick="btOperacao(value)">+</button>
+                    <br />
+
+                    <button onclick="hello()">Oi</button>
+                    <button value="0" onclick="btNumero(value)">0</button>
+                    <button value="," onclick="btNumero(value)">,</button>
+                    <button onclick="resultado()" >=</button>
+                </div>
+            </fieldset>
+        </>
+        <script src="calcuV.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: arial;
+                font-size: 16pt;
+                background: rgb(92, 92, 218);
+            }
+
+            input {
+                font-family: arial;
+                font-size: 14pt;
+            }
+
+            div#resposta {
+                background: white;
+                text-align: left;
+                padding: 100 px;
+                border-radius: 10px;
+                width: 400px;
+                margin: auto;
+                margin-top: 50px
+            }
+
+        </style>
+
+        <title>SOMANDO VALORES</title>
+    </head>
+
+    <body>
+        <div>
+            <h1>INFORME 02 VALORES PARA CALCULAR A SOMA:</h1>
+            <input type="number" name="txtn1" id="txtn1">
+            <input type="number" name="txtn2" id="txtn2">
+            <input type="button" value=" + " onclick="somar()">
+            <input type="button" value=" - " onclick="subtrair()">
+            <input type="button" value=" * " onclick="multiplicar()">
+            <input type="button" value=" / " onclick="dividir()">
+            <input type="button" value="LIMPAR" onclick="limpar()">
+        </div>
+
+        <div id="resposta">
+            Resposta:
+        </div>
+
+        <script>
+            var txt1
+            var txt2
+            var n1
+            var n2
+            var resp
+
+            function somar() {
+                ler()
+                var r = n1 + n2
+                resp.innerHTML = `<br> A soma de ${n1} e ${n2} é igual a ${r} <br>`
+            }
+
+            function subtrair() {
+                ler()
+                var r = n1 - n2
+                resp.innerHTML = `<br> A subtração de ${n1} e ${n2} é igual a ${r}<br>`
+            }
+
+            function multiplicar() {
+                ler()
+                var r = n1 * n2
+                resp.innerHTML = `<br>A multiplicacao de ${n1} e ${n2} é igual a ${r}<br>`
+            }
+
+            function dividir() {
+                ler()
+                if (n2 != 0) {
+                    var r = n1 / n2
+                    resp.innerHTML = `<br><br>A divisao de ${n1} e ${n2} é igual a ${r}<br>`
+                }
+                else {
+                    resp.innerHTML = `<br>Não existe DIVISÃO POR ZERO<br>`
+                }
+            }
+            function ler() {
+                // Faço a leitura dos elementos que eu preciso da tela
+                txt1 = window.document.getElementById('txtn1').value
+                txt2 = window.document.querySelector('input#txtn2').value
+                resp = window.document.getElementById('resposta')
+
+                n1 = Number(txt1)
+                n2 = Number(txt2)
+                resp.style.textAlign = "center" //Troca o alinhamento por centralizado
+            }
+
+            function limpar() {
+                txtn1.value = ""
+                txtn2.value = ""
+                txtn1.focus() //Muda o foco para esse objeto. Nesse caso, o cursor vai para ele
+            }
+        </script>
+
+    </body>
+
+</html>

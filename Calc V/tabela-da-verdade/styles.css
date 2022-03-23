@@ -1,0 +1,90 @@
+body {
+    font-family: cursive;
+    background-color: #07b0f3;
+    color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 4px dotted white;
+}
+
+p {
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 12pt;
+}
+
+table {
+    border: 1px solid white;
+    width: 60%;
+    margin-left: 20%;
+    text-align: center;
+}
+
+tr,
+th,
+td {
+    border: 1px solid white;
+}
+
+.neg {
+    text-decoration: overline;
+}
+
+aside {
+    width: 30%;
+    float: right;
+    margin-right: 2%;
+    text-align: center;
+    border: 1px solid white;
+}
+
+figure {
+    width: 30%;
+    float: right;
+    margin-right: 2%;
+    text-align: center;
+    clear: right;
+    border: 1px solid white;
+}
+
+figure img {
+    width: 100%;
+    height: 90%;
+}
+
+figure figcaption {
+    font: normal 14pt inherit;
+}
+
+#lou {
+    margin: 0 5%;
+}
+
+#content {
+    width: 50%;
+    float: left;
+    margin-left: 3%;
+}
+
+#calc {
+    clear: both;
+    text-align: center;
+}
+
+#eqIn {
+    height: 30px;
+}
+
+fieldset {
+    border: 1px solid white;
+}
+
+legend {
+    text-align: left;
+}
+
+form {
+    display: inline-block;
+}
